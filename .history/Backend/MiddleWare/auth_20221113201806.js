@@ -1,0 +1,22 @@
+const userModel=require('./../Models/User')
+const jwt=require('jsonwebtoken')
+
+exports.isAuthenticated=async(request,response,next)=>{
+
+      const {token}=request.cookie
+
+      if(!token)
+      {
+        response.status(400).json({
+            success: false,
+        message: "Please Login First",
+        })
+      }
+
+      const id=token.id
+
+      const decoded=await userModel.findById(id)
+
+      request.user=decoded
+}
+
