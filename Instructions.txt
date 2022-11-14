@@ -1,0 +1,23 @@
+Please change MONGO_URI in config.env if required.
+other env variables such as PORT and JWT_SECRET is also given in config.env change if required
+postman collection is added please use it for api calls
+
+STEPS
+
+1.add users first before testing in below format
+(*role should be in small case only*)
+
+    "name":"mahesh",
+    "email":"mahesh@test.com",
+    "password":"12345678",
+    "role":"admin"
+
+2.after adding user make sure to login as admin to perform crud on cloths.
+ 
+3.for adding cloths there are two postman requests given one with image and one without image
+ 
+--if adding with image please use form-data as request body from postman
+4.Postman collection contains all other request for crud 
+
+Thank You! 
+
